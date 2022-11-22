@@ -1,0 +1,13 @@
+lst_name=['Mohan','John','Ramesh','Mohan','John']
+str_cnvrt = set(lst_name)
+print(str_cnvrt)
+
+lst_num=[8,7,6,7,8,8,7,6,7,8,9,1,2,5,5,5]
+#num_cnvrt=[*set(lst_num)]
+#lst_num=list(dict.fromkeys(lst_num))
+
+#print(lst_num.count(5))
+#print(len(lst_num))
+#print(lst_num.sort())
+print(lst_num[-5])
+#print(lst_num)
