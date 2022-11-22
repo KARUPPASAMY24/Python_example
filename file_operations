@@ -1,0 +1,15 @@
+import os
+
+x=r'/odoo/odoo-server/kp_odoo_btn.txt'
+# f= open(x,"w")
+# f.write("hi i am karuppu \n sivabala \n saravanan")
+# # for i in f:
+# ln=f.readline()
+# print(ln)
+with open(x) as f: 
+    data = f.readlines() 
+    lastline = data[-1] 
+    f.flush()
+with open(x, 'w') as f1:
+    f1.write(lastline)
+    f1.flush()
