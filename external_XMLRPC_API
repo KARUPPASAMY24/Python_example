@@ -1,0 +1,24 @@
+import xmlrpc.client
+
+url = 'http://localhost:8069'
+db = 'bipl_erp11'
+user = 'karuppasamy@gmail.com.com'
+pwd = 'odoo'
+
+common =  xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
+uid=common.authenticate(db, user,pwd,{})
+
+models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
+#emp_create = models.execute_kw(db, uid, pwd,'hr.employee','create',[{'name': "Harini"}])
+#emp_search = models.execute_kw(db, uid, pwd,'hr.employee','search',[[]])
+#emp_search_r = models.execute_kw(db, uid, pwd,'hr.employee','search_read',[[]])
+
+#product_create = models.execute_kw(db, uid, pwd,'product.template','fields_get',[], {'attributes': ['string', 'help', 'type']})
+#product_create = models.execute_kw(db, uid, pwd,'product.template','create',[{'name': "Cat",'type':"service"}])
+#notebook_page=models.execute_kw(db, uid, pwd, 'sale.order', 'write',#[[sc], {'sale.order.line': [(0, '_', {'product_id': "Mobile", 'product_uom_qty': 10})]}],{}) 
+#product_create = models.execute_kw(db, uid, pwd, 'product.template', 'write', [[5], {'name': "Hero"}])
+#product_create = models.execute_kw(db, uid, pwd, 'product.template', 'search_count',[[('id', '=',5)]])
+product_create = models.execute_kw(db, uid, pwd, 'shopify.product.template.ept', 'search_count',[[]])
+#print(emp_create)
+#print(notebook_page)
+print(product_create)
