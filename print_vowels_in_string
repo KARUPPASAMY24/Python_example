@@ -1,0 +1,4 @@
+user_str ="i am uppurak"
+for letter in user_str:
+    if letter in 'aeiou':
+        print(letter)
