@@ -1,0 +1,7 @@
+ The lambda keyword is used to define anonymous functions in Python. Usually, such a function is meant for one-time use.
+ Syntax
+      lambda [arguments] : expression
+ Example
+      >>> sum = lambda x, y, z : x + y + z 
+      >>> sum(5, 10, 15)
+      30
