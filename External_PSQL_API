@@ -1,0 +1,27 @@
+from sshtunnel import SSHTunnelForwarder
+import psycopg2
+
+#conn = psycopg2.connect(database = "KP_27_09_22_tefugen_sample", 
+#      user = "postgres", password = "odoo", host = "localhost", port = "5432")
+print ("connected database successfully")
+
+cur = conn.cursor()
+
+#cur.execute(" UPDATE city_shop_customer SET name = 'Kanaka' WHERE email='karuppu25@gmail.com' ")
+
+cur.execute( "Select * from shopify_tags" )
+# cur.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+#       VALUES (1, 'Paul', 32, 'California', 20000.00 )");
+
+# cur.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+#       VALUES (2, 'Allen', 25, 'Texas', 15000.00 )");
+
+# cur.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+#       VALUES (3, 'Teddy', 23, 'Norway', 20000.00 )");
+
+# cur.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+#       VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 )");
+
+conn.commit()
+print ("Records created successfully")
+conn.close()
